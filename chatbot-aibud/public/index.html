@@ -986,18 +986,12 @@
         <p>AI strategy for founders &amp; creators</p>
       </div>
       <div class="topbar-right">
-        <button class="icon-btn" id="topbar-settings-btn" title="Settings" aria-label="Open settings">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-               stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-          </svg>
-        </button>
         <button class="icon-btn" id="clear-btn" title="Clear this chat" aria-label="Clear conversation">
+          <!-- Eraser icon — universally understood as "erase/clear" -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="3 6 5 6 21 6"/>
-            <path d="M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4h6v2"/>
+            <path d="M20 20H7L3 16l10-10 7 7-3.5 3.5"/>
+            <path d="M6.5 17.5l4-4"/>
           </svg>
         </button>
       </div>
@@ -1490,7 +1484,6 @@
   resetPrompt.addEventListener('click', () => { settings.systemPrompt = ''; promptEditor.value = defaultPrompt; saveSettings(); });
 
   document.getElementById('nav-settings').addEventListener('click', openSettings);
-  document.getElementById('topbar-settings-btn').addEventListener('click', openSettings);
   closeBtn.addEventListener('click', closeSettings);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeSettings(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeSettings(); });
